@@ -33,3 +33,14 @@ def summary_stats(wine_dataset):
     print("Summary stats of the wine points:", wine_points.describe())
     print("Summary stats of the wine prices:", wine_price.describe())
 #print(summary_stats(wine_dataset))
+#The code below shows the most frequently reviewed wine variety
+pd.set_option("display.max_rows", None, "display.max_columns", None) #To view the entire result
+wineCritFreq = wine_dataset[["taster_name","variety"]]
+wineVarietyCount = wineCritFreq.groupby("variety").count()
+wineVarietyCountSorted = wineVarietyCount.sort_values("taster_name",ascending = False)
+#print(wineVarietyCountSorted) #This will view all wine varieties
+
+#Now to graph wine varieties with more than 1000
+wineVariety1000 = wineVarietyCountSorted[wineVarietyCountSorted["taster_name"] > 1000]
+print(wineVariety1000)
+#Create plot tomorrow 2.27.22
