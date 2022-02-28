@@ -1,4 +1,4 @@
 # Wine_Review_EDA
 ## Overview
-The goal of this project is to create a set of function programming tools for performing exploratory data analysis (EDA).
-Overall, the goal should be easy for the programmer to understand and result in a deliverable that is readable by non-technical staff.
+In this project, I took the role of a data analyst for a winery looking to break into the market. Based off of the dataset,
+I transform the data to find out what kind of wine will do the best, as well as what taster to market it to.
